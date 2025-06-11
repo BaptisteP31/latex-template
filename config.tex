@@ -1,0 +1,86 @@
+% ==========================
+% ESSENTIAL PACKAGES
+% ==========================
+\usepackage[utf8]{inputenc} % UTF-8 encoding
+\usepackage[T1]{fontenc} % Character encoding for better accent handling
+\usepackage[english]{babel} % Language setting
+\usepackage{graphicx} % Image handling
+\usepackage{tabularx} % Flexible tables
+\usepackage{wrapfig} % Text-wrapped images
+\usepackage{float} % Precise figure placement
+\usepackage{hyperref} % Clickable links in the document
+\usepackage[all]{hypcap} % Fix hyperlinks to figures
+
+% ==========================
+% FONT CONFIGURATION
+% ==========================
+\usepackage{helvet} % Sans-serif font
+\renewcommand*\familydefault{\sfdefault} % Set default font to sans-serif
+
+% ==========================
+% IMAGES / ROOT DIRECTORY
+% ==========================
+\graphicspath{{./images/}} % Path to the folder containing images
+\DeclareGraphicsExtensions{.pdf,.png,.jpg} % Accepted image extensions
+
+% ==========================
+% MARGIN MANAGEMENT
+% ==========================
+\usepackage[margin=2cm,includeheadfoot]{geometry} % Custom margins
+\usepackage{afterpage} % Page management after the title page
+\usepackage{etoolbox} % Additional tools for customization
+
+% ==========================
+% HEADERS AND FOOTERS
+% ==========================
+\usepackage{fancyhdr} % Customization of headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Reset headers and footers
+\fancyhead[L]{\includegraphics[width=3cm]{logo.png}} % Placeholder logo on the left
+\fancyhead[R]{\includegraphics[width=3cm]{logo.png}} % Placeholder logo on the right
+\renewcommand{\footrulewidth}{0.4pt} % Separation line before the footer
+\fancyfoot[L]{\leftmark} % Section title on the left
+\fancyfoot[R]{\thepage} % Page number on the right
+\setlength{\headheight}{1cm} % Header height
+
+% ==========================
+% LINE SPACING
+% ==========================
+\usepackage{setspace}
+\onehalfspacing % 1.5 line spacing
+
+% ==========================
+% HYPERTEXT LINKS
+% ==========================
+\hypersetup{
+    colorlinks, % Enable colored links
+    linkcolor={black}, % Color of internal links
+    citecolor={black}, % Color of citations
+    urlcolor={black} % Color of URLs
+}
+
+% ==========================
+% TITLES AND SECTIONS
+% ==========================
+\usepackage{titlesec} % Title customization
+
+\titleformat{\section}[hang]{\normalfont\Large\bfseries\raggedleft}{\thesection}{1em}{}[\titlerule\vspace{0.5em}]
+\titleformat{\subsection}[hang]{\normalfont\bfseries\centering}{\thesubsection}{1em}{}
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries\centering}{\thechapter}{1em}{}
+
+% ==========================
+% SECTION NUMBERING
+% ==========================
+\setcounter{secnumdepth}{3} % Numbering depth
+\setcounter{tocdepth}{3} % Table of contents depth
+
+% ==========================
+% LISTS AND BULLETS
+% ==========================
+\renewcommand{\labelitemi}{$\bullet$} % Set bullets as solid dots
+
+% ==========================
+% TEXT JUSTIFICATION
+% ==========================
+\usepackage{ragged2e}
+\justifying % Always justify text
